@@ -1,0 +1,60 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons> 
+    <ion-title class="in"> DSOPCs <img class="imga" src="https://static.vecteezy.com/system/resources/previews/021/918/117/original/pcs-letter-logo-design-in-illustration-logo-calligraphy-designs-for-logo-poster-invitation-etc-vector.jpg" style="width: 50px; height: 50px; margin-left: 170px;"></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="login-page">
+
+  <ion-card class="card">
+    <ion-card-header>
+      <ion-card-title class="login">Inicio de Sesión</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+
+  <!-- formulario de login-->
+  <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+    <!-- campo de correo -->
+    <ion-item class="input-item" lines="none">
+      <ion-label position="floting">Correo Electronico</ion-label>
+      <ion-input type="email" formControlName="email"></ion-input>
+    </ion-item>
+    <div class="error-message" *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched">
+      ingrese un correo valido
+    </div>
+
+
+    <!-- campo de contraseña -->
+    <ion-item class="input-item" lines="none">
+      <ion-label position="floting">Contraseña</ion-label>
+      <ion-input type="password" formControlName="password"></ion-input>
+    </ion-item>
+    <div class="error-message" *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched">
+      la contraseña es obligatoria
+    </div>
+
+    <!--Boton de inicio de sesion -->
+    <ion-button type="submit" expand="block" color="primary" [disabled]="loginForm.invalid">Iniciar Sesión</ion-button>
+  </form>
+    </ion-card-content>
+    <p>Este sitio está protegido por Duoc y se aplican las Políticas de privacidad y Condiciones de servicio de Duoc.</p>
+  </ion-card>
+
+  <!--Enlaces de registro y recuperar contraseña  -->
+  <div class="links-container">
+    <ion-text color="medium">
+      <p>
+        ¿No tienes una cuenta? <a (click)="irRegistro()">Registrarse</a>
+      </p>
+    </ion-text>
+
+    <ion-text color="medium">
+      <p>
+        ¿Olvidaste tu Contraseña? <a (click)="irOlvido()">Recuperar tu Contraseña</a>
+      </p>
+    </ion-text>
+  </div>
+</ion-content>

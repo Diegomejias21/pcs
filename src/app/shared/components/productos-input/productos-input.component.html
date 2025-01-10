@@ -1,0 +1,16 @@
+<ion-item>
+  <ion-label position="floating">Producto</ion-label>
+  <ion-input [(ngModel)]="product.name" placeholder='Ej: Pc Torre'></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label position="floating">Stock</ion-label>
+  <ion-input [(ngModel)]="product.stock" placeholder='ej: 3 '></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label position="floating">Precio</ion-label>
+  <ion-input [(ngModel)]="product.price" placeholder='ej: $999.999 Clp '></ion-input>
+</ion-item>
+
+<ion-button (click)="addProduct()" expand="block">Agregar</ion-button>

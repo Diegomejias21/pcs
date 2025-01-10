@@ -1,0 +1,36 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form>
+    <ion-item>
+      <ion-label position="floting">Nombre</ion-label>
+      <ion-input type="text" name="name" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floting">Apellido</ion-label>
+      <ion-input type="text" name="name" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floting">foto de perfil</ion-label>
+      <ion-button expand="block">subir foto</ion-button>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label position="floting">Nueva Contraseña</ion-label>
+      <ion-input type="password" name="password" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floting">Confirmar Contraseña</ion-label>
+      <ion-input type="password" name="confirmarpassword" required></ion-input>
+    </ion-item>
+
+    <ion-button type="submit" expand="block">Guardar Cambios</ion-button>
+  </form>
+</ion-content>
