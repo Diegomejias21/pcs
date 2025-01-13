@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-pag',
@@ -8,7 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PagPage implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router) { }
+
+  irProductos(){
+    this.router.navigate(['/productos']);
+  }
 
   ngOnInit() {
   }

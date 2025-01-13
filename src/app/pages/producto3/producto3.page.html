@@ -1,0 +1,42 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+      <ion-title>DSOPCs</ion-title>
+      <ion-searchbar></ion-searchbar>
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <img
+      alt="PC Ryzen level 6"
+      src="http://cdn.shopify.com/s/files/1/0549/6638/6775/products/0035__0001_PC205086-Edit_jpg_b243f5e6-e5e3-4397-9cb9-94ab7b325861.jpg?v=1681376642"
+    />
+    <ion-card-header>
+      <ion-card-title>PC Ryzen level 6</ion-card-title>
+      <ion-card-subtitle>Precio: $1.500.000 CLP</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Contiene un procesador 5600 y un RTX 3060 12GB tarjeta grafica, 32GB de memoria RAM, Geforce RTX 3060 12GB.</p>
+      <ion-card-subtitle>Disponible: {{ product.stock }}</ion-card-subtitle>
+    </ion-card-content>
+  </ion-card>
+ 
+  <ion-button class="add-to-cart-button" (click)="addToCart()">Agregado al carrito</ion-button>
+
+  <div class="counter-container">
+    <ion-button color="light" (click)="decrement()" [disabled]="quantity <= 1">
+      -
+    </ion-button>
+    <ion-label>{{ quantity }}</ion-label>
+    <ion-button color="light" (click)="increment()" [disabled]="quantity >= product.stock">
+      +
+    </ion-button>
+  </div>
+</ion-content>
+  <ion-footer>
+  <ion-button class="boton" color="primary" (click)="ircarro()">ver el carro</ion-button>
+  </ion-footer>

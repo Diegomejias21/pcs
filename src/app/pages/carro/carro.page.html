@@ -1,0 +1,49 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-title>Carro Compra</ion-title>
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content *ngIf="cartItems.length > 0; else emptyCart">
+  <ion-list>
+    <ion-item *ngFor="let item of cartItems">
+      <!-- Mostrar imagen -->
+      <ion-thumbnail slot="start">
+        <img [src]="item.img" alt="{{ item.name }}" />
+      </ion-thumbnail>
+
+      <!-- Detalles del producto -->
+      <ion-label>
+        <h2 class="product-name">{{ item.name }}</h2>
+        <p>Precio: ${{ item.price }} x {{ item.quantity }}</p>
+      </ion-label>
+
+      <!-- Controles para cantidad -->
+      <div class="counter">
+        <ion-button color="light" (click)="decrement(item.id)" [disabled]="item.quantity <= 1">-</ion-button>
+        <ion-label>{{ item.quantity }}</ion-label>
+        <ion-button color="light" (click)="increment(item.id)" [disabled]="item.quantity >= 3">+</ion-button>
+      </div>
+    </ion-item>
+  </ion-list>
+
+  <!-- Total y botón de compra -->
+  <ion-footer>
+    <ion-toolbar>
+      <ion-title>Total: ${{ getTotal() }}</ion-title>
+      <ion-button expand="block" (click)="confirmPurchase()">Confirmar Compra</ion-button>
+    </ion-toolbar>
+  </ion-footer>
+</ion-content>
+
+<ng-template #emptyCart>
+  <ion-text>
+    <h1>Tu carrito está vacío</h1>
+    <p>¡Explora nuestros productos y llena tu carrito!</p>
+    <ion-button routerLink="/productos">Ver productos</ion-button>
+  </ion-text>
+</ng-template>

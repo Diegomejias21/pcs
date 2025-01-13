@@ -1,0 +1,56 @@
+*{
+    background-color: rgb(194, 234, 195);
+}
+
+.pro{
+    text-align: center;
+    background-color: rgb(247, 247, 247);
+}
+
+.btn{
+    text-align: center;
+    background-color: aliceblue;
+}
+
+.btn_carro_1{
+    text-align: center;
+    margin-right: auto;
+}
+
+.counter-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+  }
+  
+  .counter-container ion-label {
+    margin: 0 15px;
+    font-size: 1.5em;
+  }
+  
+  ion-button {
+    margin: 5px;
+  }
+  
+
+  .add-to-cart-button {
+    position: fixed;
+    left: 35px;
+    bottom: 15px;
+    background-color: #3880ff;
+    color: #fff;
+    border-radius: 15px;
+    padding: 5px 15px;
+    font-size: 16px;
+  }
+  
+  .counter {
+    display: flex;
+    align-items: center;
+  }
+  
+  .counter ion-label {
+    margin: 0 10px;
+  }
+  

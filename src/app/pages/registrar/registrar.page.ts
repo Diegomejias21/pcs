@@ -39,6 +39,8 @@ export class RegistrarPage implements OnInit {
       const {firstName, lastName, email, password} = this.registroForm.value;
       console.log('Registro: ',{ firstName, lastName, email, password});
       //llamar al servicio de registro (AuthService)
+      //Redirreccionara a la pagina principal
+      this.navCtrl.navigateForward('/pag');
     }
   }
 

@@ -1,0 +1,70 @@
+.container{
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center;     /* Centra verticalmente */
+  height:55vh;           /* Ocupa toda la altura de la pantalla */
+  background-color: aliceblue;
+}
+
+img {
+  background-color: aliceblue;
+  max-width: 100%;         /* Asegura que la imagen no se salga del contenedor */
+  height: auto;            /* Mantiene la proporción de la imagen */
+}
+.h2{
+  background-color: aliceblue;
+}
+.card{
+  background-color: aliceblue;
+}
+.titulo{
+  display: flex;
+  justify-content: center;
+  background-color: aliceblue;
+}
+
+.boton{
+  justify-content: end;
+  display: flex;
+}
+
+.pie{
+  display: flex;
+  text-align: center;
+  background-color: aliceblue;
+}
+.counter-container {
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  margin: 2px 0;
+}
+
+.counter-container ion-label {
+  margin: 0 15px;
+  font-size: 1.5em;
+}
+
+ion-button {
+  margin: 2px;
+}
+
+
+.add-to-cart-button {
+  left: 10px;
+  bottom: 20px;
+  background-color: #3880ff;
+  color: #fff;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+}
+
+.counter ion-label {
+  margin: 0 10px;
+}

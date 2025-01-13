@@ -1,36 +1,88 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>perfil</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+      <ion-title>DSOPCs</ion-title>
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <form>
-    <ion-item>
-      <ion-label position="floting">Nombre</ion-label>
-      <ion-input type="text" name="name" required></ion-input>
-    </ion-item>
+
+
+<ion-content class="ion-padding">
+  <div class="avatar-container">
+    <img [src]="avatarUrl" alt="Profile Picture" class="avatar-img" />
+  </div>
+
+  <ion-card class="card">
+    <ion-card-header>
+      <ion-card-title class="datos">Datos Personales</ion-card-title>
+    </ion-card-header>
+
+    <form [formGroup]="registroForm" (ngSubmit)="irRegistro()">
+
+   <!-- campo de Nombre -->
+   <ion-item class="input-item" lines="none">
+    <ion-label position="floating">Nombre:</ion-label>
+    <ion-input type="text" formControlName="firstName"></ion-input>
+    <ion-icon slot="end" name="create-outline" class="edit-icon"></ion-icon>
+  </ion-item>
+  <div class="error-message" *ngIf="registroForm.get('firstName')?.touched && registroForm.get('firstName')?.invalid">
+     Nombre es obligatorio. 
+  </div>
+
+  <!-- campo de Apellido -->
+  <ion-item class="input-item" lines="none">
+    <ion-label position="floting">Apellido:</ion-label>
+    <ion-input type="text" formControlName="lastName"></ion-input>
+    <ion-icon slot="end" name="create-outline" class="edit-icon"></ion-icon>
+  </ion-item>
+  <div class="error-message" *ngIf="registroForm.get('lastName')?.touched && registroForm.get('lastName')?.invalid">
+    El apellido es obligatorio.
+  </div>
+
+   <!-- campo de correo -->
+   <ion-item class="input-item" lines="none">
+    <ion-label position="floting">Correo:</ion-label>
+    <ion-input type="email" formControlName="email"></ion-input>
+    <ion-icon slot="end" name="create-outline" class="edit-icon"></ion-icon>
+  </ion-item>
+  <div class="error-message" *ngIf="registroForm.get('email')?.touched && registroForm.get('email')?.invalid">
+    ingrese un correo valido
+  </div>
+
+  <!-- campo de contraseña -->
+  <ion-item class="input-item" lines="none">
+    <ion-label position="floting">Contraseña:</ion-label>
+    <ion-input type="password" formControlName="password"></ion-input>
+    <ion-icon slot="end" name="create-outline" class="edit-icon"></ion-icon>
+  </ion-item>
+  <div class="error-message" *ngIf="registroForm.get('password')?.touched && registroForm.get('password')?.invalid">
+    la contraseña debe tener al menos 6 caracteres.
+  </div>
+
+  <!-- confirmar contraseña -->
+  <ion-item class="input-item" lines="none">
+    <ion-label position="floting">Confirmar Contraseña:</ion-label>
+    <ion-input type="password" formControlName="confirmarPassword"></ion-input>
+    <ion-icon slot="end" name="create-outline" class="edit-icon"></ion-icon>
+  </ion-item>
+  <div class="error-message" *ngIf="registroForm.get('confirmarPassword')?.touched && registroForm.get('confirmarPassword')?.invalid">
+    la contraseñas no coincide.
+  </div>
 
     <ion-item>
-      <ion-label position="floting">Apellido</ion-label>
-      <ion-input type="text" name="name" required></ion-input>
+      <ion-label>Foto de perfil:</ion-label>
+      <input type="file" (change)="onFileSelected($event)" />
     </ion-item>
-
-    <ion-item>
-      <ion-label position="floting">foto de perfil</ion-label>
-      <ion-button expand="block">subir foto</ion-button>
-    </ion-item>
-    
-    <ion-item>
-      <ion-label position="floting">Nueva Contraseña</ion-label>
-      <ion-input type="password" name="password" required></ion-input>
-    </ion-item>
-
-    <ion-item>
-      <ion-label position="floting">Confirmar Contraseña</ion-label>
-      <ion-input type="password" name="confirmarpassword" required></ion-input>
-    </ion-item>
-
-    <ion-button type="submit" expand="block">Guardar Cambios</ion-button>
   </form>
+
+</ion-card>
 </ion-content>
+<ion-footer>
+
+<ion-button (click)="saveChanges()" expand="block">Guardar Cambios</ion-button>
+
+</ion-footer>
+

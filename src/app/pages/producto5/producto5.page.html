@@ -1,0 +1,42 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-title>DSOPCs</ion-title>
+      <ion-back-button></ion-back-button>
+      <ion-searchbar></ion-searchbar>
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <img
+    [alt]="product.name"
+    [src]="'https://imagedelivery.net/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/17099057_1/w=1500,h=1500,fit=pad'"
+  />
+    <ion-card-header>
+      <ion-card-title>Notebook Acer Nitro V15</ion-card-title>
+      <ion-card-subtitle>Precio: $859.990  CLP</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Contiene Intel Core i5 8 Núcleos 16GB RAM 512GB SSD NVIDIA RTX 3050.</p>
+      <ion-card-subtitle>Disponible: {{ product.stock }}</ion-card-subtitle>
+    </ion-card-content>
+  </ion-card>
+  
+  <ion-button class="add-to-cart-button" (click)="addToCart()">Agregado al carrito</ion-button>
+
+  <div class="counter-container">
+    <ion-button color="light" (click)="decrement()" [disabled]="quantity <= 1">
+      -
+    </ion-button>
+    <ion-label>{{ quantity }}</ion-label>
+    <ion-button color="light" (click)="increment()" [disabled]="quantity >= product.stock">
+      +
+    </ion-button>
+  </div>
+</ion-content>
+  <ion-footer>
+  <ion-button class="boton" color="primary" (click)="ircarro()">ver el carro</ion-button>
+  </ion-footer>

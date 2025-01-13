@@ -1,0 +1,39 @@
+.add-to-cart-button {
+  position: fixed;
+  left: 10px;
+  bottom: 20px;
+  background-color: #3880ff;
+  color: #fff;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+}
+
+.counter ion-label {
+  margin: 0 10px;
+}
+
+ion-thumbnail {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.product-name {
+  font-size: 0.9rem; /* Texto más pequeño */
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.h1{
+  text-align: center;
+}  

@@ -5,6 +5,12 @@ import { IonicModule } from '@ionic/angular';
 
 @NgModule({
   declarations: [],
+  exports: [
+    ReactiveFormsModule,
+    CommonModule,
+    FormsModule,
+    IonicModule, // Importar IonicModule para utilizar componentes y servicios de Ionic
+  ],  // Exportar componentes y servicios de este módulo para ser utilizados en otros módulos.
   imports: [
     CommonModule,
     FormsModule,

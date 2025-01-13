@@ -4,9 +4,9 @@ import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { PerfilPageRoutingModule } from './perfil-routing.module';
+import { CarroPageRoutingModule } from './carro-routing.module';
 
-import { PerfilPage } from './perfil.page';
+import { CarroPage } from './carro.page';
 
 @NgModule({
   imports: [
@@ -14,8 +14,8 @@ import { PerfilPage } from './perfil.page';
     FormsModule,
     ReactiveFormsModule,
     IonicModule,
-    PerfilPageRoutingModule
+    CarroPageRoutingModule
   ],
-  declarations: [PerfilPage]
+  declarations: [CarroPage]
 })
-export class PerfilPageModule {}
+export class CarroPageModule {}

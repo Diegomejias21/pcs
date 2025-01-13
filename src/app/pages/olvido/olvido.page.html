@@ -1,19 +1,29 @@
-<ion-header>
+<ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>recuperar Contraseña</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Recuperar Contraseña </ion-title>
   </ion-toolbar>
 </ion-header>
 
+
 <ion-content>
+  <ion-card class="olvido">
   <form>
       <ion-item>
-        <ion-label position="floting">correo</ion-label>
+        <ion-label position="floting">correo:</ion-label>
         <ion-input type="email" name="email" required></ion-input>
       </ion-item>
-
-      
+      <p></p>
       <ion-button type="submit" expand="block">recuperar Contraseña</ion-button>
-      <ion-button routerLink="/login">inicio de sesion</ion-button>
-
+        <p></p>
   </form>
+</ion-card>
 </ion-content>
+
+<ion-footer>
+  <ion-card> 
+    <ion-button expand="block" routerLink="/inicio">Inicio de sesion</ion-button>
+  </ion-card>
+</ion-footer>

@@ -1,0 +1,12 @@
+.olvido{
+    display:block;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center;     /* Centra verticalmente */
+    margin-top:60px;
+    padding: 10px;
+    background-color: #f5f5f5;
+    color: #999;
+    border-radius: 8px;
+    cursor: pointer;
+    flex-direction: column;  /* Alinear verticalmente */
+}

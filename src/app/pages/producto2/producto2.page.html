@@ -1,0 +1,43 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+      <ion-title>DSOPCs</ion-title>
+      <ion-searchbar></ion-searchbar>
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <br><br><br>
+  <ion-card>
+    <img
+      alt="Netbook Gamer Strix G15"
+      src="https://mmorpgbr.com.br/wp-content/uploads/2022/06/maxresdefault-12.jpeg"
+    />
+    <ion-card-header>
+      <ion-card-title>Netbook Gamer Strix G15</ion-card-title>
+      <ion-card-subtitle>Precio: $800.000 CLP</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Contiene procesador AMD Ryzen 7 4800H, 8GB de memoria RAM, 512GB de SSD de una placa de video Nvidia GeForce RTX 3050.</p>
+      <ion-card-subtitle>Disponible: {{ product.stock }}</ion-card-subtitle>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-button class="add-to-cart-button" (click)="addToCart()">Agregado al carrito</ion-button>
+
+  <div class="counter-container">
+    <ion-button color="light" (click)="decrement()" [disabled]="quantity <= 1">
+      -
+    </ion-button>
+    <ion-label>{{ quantity }}</ion-label>
+    <ion-button color="light" (click)="increment()" [disabled]="quantity >= product.stock">
+      +
+    </ion-button>
+  </div>
+</ion-content>
+  <ion-footer>
+  <ion-button class="boton" color="primary" (click)="ircarro()">ver el carro</ion-button>
+  </ion-footer>

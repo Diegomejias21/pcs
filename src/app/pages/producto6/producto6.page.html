@@ -1,0 +1,42 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+      <ion-title>DSOPCs</ion-title>
+      <ion-searchbar></ion-searchbar>
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <img
+      alt="NPC Gamer green"
+      src="https://imagedelivery.net/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/130171593_01/w=1500,h=1500,fit=pad"
+    />
+    <ion-card-header>
+      <ion-card-title>NPC Gamer green</ion-card-title>
+      <ion-card-subtitle>Precio: $992.520 CLP </ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Contiene Intel i5 12400F 6-Core + H610 WIFI + 16GB DDR4 + RTX 3060 12GB.</p>
+      <ion-card-subtitle>Disponible: {{ product.stock }}</ion-card-subtitle>
+    </ion-card-content>
+  </ion-card>
+  
+  <ion-button class="add-to-cart-button" (click)="addToCart()">Agregado al carrito</ion-button>
+
+  <div class="counter-container">
+    <ion-button color="light" (click)="decrement()" [disabled]="quantity <= 1">
+      -
+    </ion-button>
+    <ion-label>{{ quantity }}</ion-label>
+    <ion-button color="light" (click)="increment()" [disabled]="quantity >= product.stock">
+      +
+    </ion-button>
+  </div>
+</ion-content>
+  <ion-footer>
+  <ion-button class="boton" color="primary" (click)="ircarro()">ver el carro</ion-button>
+  </ion-footer>
