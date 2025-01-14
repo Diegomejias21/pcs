@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-title>Carro Compra</ion-title>
+    <ion-title>Carro Compra</ion-title>
+    <ion-buttons slot="end">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
   </ion-toolbar>
@@ -41,9 +41,11 @@
 </ion-content>
 
 <ng-template #emptyCart>
-  <ion-text>
-    <h1>Tu carrito está vacío</h1>
-    <p>¡Explora nuestros productos y llena tu carrito!</p>
-    <ion-button routerLink="/productos">Ver productos</ion-button>
-  </ion-text>
+  <ion-content class="empty-cart-container">
+    <ion-text>
+      <h1>Tu carrito está vacío</h1>
+      <p>¡Explora nuestros productos y llena tu carrito!</p>
+      <ion-button routerLink="/productos">Ver productos</ion-button>
+    </ion-text>
+  </ion-content>
 </ng-template>

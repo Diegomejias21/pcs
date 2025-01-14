@@ -5,10 +5,29 @@
     color: red;
 }
 .avatar-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-  }
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.icon-background {
+  font-size: 150px; /* Tamaño del ícono circular de fondo */
+  color: #f0f0f0; /* Color del fondo */
+  position: absolute;
+  z-index: 1;
+}
+
+.avatar-img {
+  width: 120px; /* Ajusta el tamaño según lo necesario */
+  height: 120px;
+  border-radius: 50%; /* Hace la imagen circular */
+  object-fit: cover; /* Mantiene la proporción de la imagen */
+  z-index: 2; /* Coloca la imagen sobre el ícono */
+  border: 3px solid #fff; /* Opcional: borde alrededor de la imagen */
+}
+
   .edit-icon {
     color: var(--ion-color-primary);
     font-size: 20px;

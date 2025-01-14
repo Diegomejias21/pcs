@@ -37,3 +37,29 @@ ion-thumbnail {
 .h1{
   text-align: center;
 }  
+
+.empty-cart-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Alinea el contenido al inicio verticalmente */
+  text-align: center;
+  height: 5%; /* Ocupa toda la altura de la pantalla */
+  flex-direction: column; /* Coloca los elementos en una columna */
+  padding: 10px;
+  padding-top:10vh; /* Ajusta este valor para mover el contenido más abajo */
+}
+
+
+h1 {
+  font-size: 24px; /* Ajusta el tamaño del texto principal */
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 16px; /* Ajusta el tamaño del texto secundario */
+  margin-bottom: 20px;
+}
+
+ion-button {
+  --border-radius: 20px; /* Estilo opcional para redondear el botón */
+}

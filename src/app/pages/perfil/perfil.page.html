@@ -3,8 +3,10 @@
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
       <ion-title>DSOPCs</ion-title>
-      <ion-menu-button></ion-menu-button>
     </ion-buttons>
+      <ion-buttons slot="end">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -12,6 +14,7 @@
 
 <ion-content class="ion-padding">
   <div class="avatar-container">
+    <ion-icon name="person-circle-outline" class="icon-background"></ion-icon>
     <img [src]="avatarUrl" alt="Profile Picture" class="avatar-img" />
   </div>
 

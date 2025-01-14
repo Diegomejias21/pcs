@@ -8,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   constructor() {}
+
+  logout() {
+    console.log('Cerrar sesión');
+    // Aquí puedes agregar la lógica para cerrar sesión.
+  }
+  
 }
